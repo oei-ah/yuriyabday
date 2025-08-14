@@ -130,10 +130,10 @@ const quizMsg = document.querySelector('#quizMsg');
 document.querySelectorAll('.answer').forEach(btn => {
   btn.addEventListener('click', () => {
     const replies = [
-      'Correct. Every option with you is perfect. 💘',
-      'Ding ding! We just unlocked a core memory. ✨',
-      'Yes. And I’m buying dessert. 🍨',
-      'Approved by the Council of Cuddles. 🫶'
+      'Correct! Every option with you is perfect! 💘',
+      '사랑해 Yuriya! ✨',
+      'Okie! And with lots and lots cuddles :3',
+      'And with lots of kissies and more kissies! 🫶'
     ];
     if (quizMsg) quizMsg.textContent = replies[Math.floor(Math.random()*replies.length)];
     burstHearts(12);
@@ -204,4 +204,5 @@ document.querySelectorAll('.answer').forEach(btn => {
     return str.replace(/[&<>"]+/g, s=> ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[s]));
   }
 })();
+
 
