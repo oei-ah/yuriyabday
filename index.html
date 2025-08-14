@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday Yuriya! 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Opening Cover -->
+  <div class="cover" id="cover" aria-label="Open the birthday surprise">
+    <div class="gift" id="gift">
+      <div class="ribbon">🎀 Happy Birthday Yuriya! 🎀</div>
+      <div class="open-btn"><span class="hint">Open your surprise</span></div>
+    </div>
+  </div>
+
+  <div class="hearts" id="hearts"></div>
+
+  <div class="wrap" id="app">
+    <header>
+      <div style="font-weight:800; letter-spacing:.3px">💕 <span id="brand">For My Favourite Human</span></div>
+      <div class="controls">
+        <button class="ghost" id="toggleTheme" title="Toggle theme">🌙 Theme</button>
+<!--        <button class="ghost" id="editBtn" title="Personalise">✏️ Edit</button> -->
+        <button id="shower" title="Shower with hearts">💗 Hearts</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1 class="type" id="title">Happy Birthday, <span id="name">My Love</span> ✨</h1>
+      <p id="subtitle">Here’s a tiny website I made just for you! because Yuriya deserve her own little place on the internet! 💌</p>
+    </section>
+
+    <section class="card">
+      <div class="meter">
+        <div style="min-width:110px; font-weight:700">Love-o-meter</div>
+        <input type="range" min="0" max="100" value="35" id="meterRange" />
+        <div id="meterLabel" style="min-width:72px; text-align:right; font-weight:800">35%</div>
+      </div>
+      <p style="margin:.6rem 0 0; opacity:.8">Slide to send hearts :> The higher the number, the more hearts fly! 🫶</p>
+    </section>
+
+    <section class="card reasons">
+      <h2 style="margin-top:0">Some of the reasons why I adore you so much :3</h2>
+      <div class="grid" id="reasons"></div>
+    </section>
+
+    <section class="card gallery">
+      <h2 style="margin-top:0">Our tiny gallery</h2>
+      <div class="polaroids" id="polaroids"></div>
+    </section>
+
+    <section class="card quiz">
+      <h2 style="margin-top:0">A sweet little quiz</h2>
+      <div class="q">What should we do <em>tonight</em> to celebrate?</div>
+      <div class="answers">
+        <button class="ghost answer">Cozy movie + blankets</button>
+        <button class="ghost answer">Dessert crawl 🍰</button>
+        <button class="ghost answer">Stargazing walk ✨</button>
+        <button class="ghost answer">Board games + tea</button>
+      </div>
+      <p id="quizMsg" style="margin-top:10px; font-weight:700"></p>
+    </section>
+
+    <section class="card">
+      <h2 style="margin-top:0">To my Yuriya,</h2>
+      <p id="message">TEXT HERE 💖</p>
+      <p style="opacity:.8; font-weight:700">— <span id="sign">Your Ambieya!</span></p>
+    </section>
+  </div>
+
+  <footer>
+    <div class="bar">
+      <button class="ghost" onclick="window.print()">🖨️ Print as a card</button>
+      <a class="btn" id="saveBtn" download="birthday-page.html">💾 Save this page</a>
+    </div>
+  </footer>
+
+  <!-- Personalise Modal (lightweight inline) -->
+  <template id="modalTpl">
+    <dialog id="modal" style="border:0; border-radius:20px; padding:0; max-width:680px; width:92vw; background:var(--card); color:var(--ink); box-shadow:var(--shadow)">
+      <form method="dialog" style="padding:18px 18px 6px">
+        <h3 style="margin:0 0 10px">Make it yours ✏️</h3>
+        <div class="grid">
+          <label class="card"><div class="title">Her name</div><input id="inName" type="text" placeholder="e.g. Snowie" style="width:100%; padding:10px; border-radius:10px; border:1px solid #00000022"></label>
+          <label class="card"><div class="title">Tagline under the title</div><input id="inSubtitle" type="text" placeholder="A tiny website just for you" style="width:100%; padding:10px; border-radius:10px; border:1px solid #00000022"></label>
+          <label class="card" style="grid-column:1/-1"><div class="title">Main message</div><textarea id="inMsg" rows="4" style="width:100%; padding:10px; border-radius:10px; border:1px solid #00000022"></textarea></label>
+          <label class="card"><div class="title">Signature</div><input id="inSign" type="text" placeholder="— Your name" style="width:100%; padding:10px; border-radius:10px; border:1px solid #00000022"></label>
+          <label class="card"><div class="title">Add a new reason</div><input id="inReason" type="text" placeholder="Because…" style="width:100%; padding:10px; border-radius:10px; border:1px solid #00000022"></label>
+        </div>
+        <div style="display:flex; justify-content:flex-end; gap:8px; padding:12px 4px 10px">
+          <button class="ghost" value="cancel">Cancel</button>
+          <button id="saveModal">Save</button>
+        </div>
+      </form>
+    </dialog>
+  </template>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
