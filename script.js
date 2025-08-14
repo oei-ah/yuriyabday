@@ -110,11 +110,12 @@ function addPolaroid(url, caption = 'us ✨') {
 
 // List your files here (adjust .jpg/.png where needed)
 const initialPhotos = [
-  'photos/1.png','photos/2.jpg','photos/3.jpg','photos/4.jpg','photos/5.jpg',
-  'photos/6.png','photos/7.jpg','photos/8.jpg','photos/9.jpg','photos/10.jpg',
-  'photos/11.jpg','photos/12.jpg','photos/13.jpg','photos/14.jpg','photos/15.jpg',
-  'photos/16.png','photos/17.jpg','photos/18.png','photos/19.jpg','photos/20.jpg',
+  '1.png','2.jpg','3.jpg','4.jpg','5.jpg',
+  '6.png','7.jpg','8.jpg','9.jpg','10.jpg',
+  '11.jpg','12.jpg','13.jpg','14.jpg','15.jpg',
+  '16.png','17.jpg','18.png','19.jpg','20.jpg',
 ];
+
 
 // Optional: turn filename into a caption
 const toCaption = (p) => p.split('/').pop().replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
@@ -203,3 +204,4 @@ document.querySelectorAll('.answer').forEach(btn => {
     return str.replace(/[&<>"]+/g, s=> ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[s]));
   }
 })();
+
