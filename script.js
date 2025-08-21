@@ -116,7 +116,6 @@ const initialPhotos = [
   '16.png','17.jpg','18.png','19.jpg','20.jpg',
 ];
 
-
 // Optional: turn filename into a caption
 const toCaption = (p) => p.split('/').pop().replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
 
@@ -130,10 +129,10 @@ const quizMsg = document.querySelector('#quizMsg');
 document.querySelectorAll('.answer').forEach(btn => {
   btn.addEventListener('click', () => {
     const replies = [
-      'Correct! Every option with you is perfect! 💘',
-      '사랑해 Yuriya! ✨',
-      'Okie! And with lots and lots cuddles :3',
-      'And with lots of kissies and more kissies! 🫶'
+      'I love you Yuriya 💘',
+      '사랑해 🫰',
+      'I absolutely adore you :> 🌸',
+      'Yuriya my world! 🌎'
     ];
     if (quizMsg) quizMsg.textContent = replies[Math.floor(Math.random()*replies.length)];
     burstHearts(12);
@@ -204,5 +203,3 @@ document.querySelectorAll('.answer').forEach(btn => {
     return str.replace(/[&<>"]+/g, s=> ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[s]));
   }
 })();
-
-
